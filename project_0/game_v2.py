@@ -1,26 +1,35 @@
-def optimal_predict(number: int = 1) -> int:
-    '''Игра компьютер угадает число меньше чем за 20 попыток'''
-
-    import numpy as np
-
-    min = 1
-    max = 1000
-
-    number = np.random.randint(min, max)
-
+import numpy as np
+def secret_number(number:int)->int:
     count = 0
+    min_n = 1
+    max_n = 101
 
     while True:
-        count+=1
-        mid = (min+max) // 2
+        count += 1
+        mid=((min_n + max_n)//2)
     
         if mid > number:
-          max = mid
-    
+            max_n = mid
+
         elif mid < number:
-          min = mid
+            min_n = mid
 
         else:
-            print(f"Компьютер угадал число за {count} попыток. Это число {number}")
-            break #конец игры выход из цикла
-    return count
+            break 
+    return(count)
+secret_number(np.random.randint(1,101))
+
+def score_game(secret_number) -> int:
+    sum_count = []
+    np.random.seed(1)
+    number_array = np.random.randint(1, 101, size=(1000))
+    for number in number_array:
+        sum_count.append(secret_number(number))
+    score = int(np.mean(sum_count))
+    print(f'Ваш алгоритм угадывает число в среднем за: {score} попыток')
+    return(score)
+score_game(secret_number)
+
+#RUN
+if __name__ == '__main__':
+    score_game(secret_number)
