@@ -1,1 +1,4 @@
-https://drive.google.com/file/d/1wJTdvK6My2yOh1_cZsaTVMyN2kblfcfC/view?usp=sharing
+# Проект: Анализ вакансий на hh.ru
+## Описание проекта
+Подготовка, преобразование и очистка данных по вакансиям для удобства дальнейшей работы с данными.
+Ссылка на скачивание файла csv https://drive.google.com/file/d/1wJTdvK6My2yOh1_cZsaTVMyN2kblfcfC/view?usp=sharing
